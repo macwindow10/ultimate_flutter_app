@@ -50,7 +50,7 @@ A Flutter mobile application featuring:
 - [Flutter](https://flutter.dev/)
 - [Dart](https://dart.dev/)
 - [Firebase Authentication](https://firebase.google.com/docs/auth)
-- [http](https://pub.dev/packages/http) package for REST API calls
+- [http](https://pub.dev/packages/http)
 
 ---
 

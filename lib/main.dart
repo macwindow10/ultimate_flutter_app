@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ultimate_flutter_app/widgets/navbar_widget.dart';
+import 'package:ultimate_flutter_app/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,16 +21,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
               seedColor: Colors.teal, brightness: Brightness.dark)),
-      home: Scaffold(
-        appBar: AppBar(title: Text('Ultimate Flutter App')),
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Icons.person), label: 'Person')
-          ],
-          selectedIndex: selectedIndex,
-        ),
-      ),
+      home: const WidgetTree(),
     );
   }
 }
