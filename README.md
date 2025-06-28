@@ -35,7 +35,6 @@ A Flutter mobile application featuring:
 - [Dart](https://dart.dev/)
 - [Firebase Authentication](https://firebase.google.com/docs/auth)
 - [http](https://pub.dev/packages/http) package for REST API calls
-- State Management: Provider / Riverpod / Bloc (choose your preferred)
 
 ---
 
