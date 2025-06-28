@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ultimate_flutter_app/data/notifiers.dart';
 import 'package:ultimate_flutter_app/views/pages/home_page.dart';
 import 'package:ultimate_flutter_app/views/pages/profile_page.dart';
-import 'package:ultimate_flutter_app/widgets/navbar_widget.dart';
+import 'package:ultimate_flutter_app/views/widgets/navbar_widget.dart';
 
 List<Widget> pages = [
   HomePage(),
@@ -15,7 +16,12 @@ class WidgetTree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ultimate Flutter App')),
-      body: pages.elementAt(0),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        },
+      ),
       bottomNavigationBar: NavbarWidget(),
     );
   }
