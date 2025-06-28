@@ -1,16 +1,48 @@
-# ultimate_flutter_app
+# Ultimate Flutter App
 
-A new Flutter project.
+A Flutter mobile application featuring:
 
-## Getting Started
+✅ User Authentication (Firebase)  
+✅ Login Page  
+✅ Home Page  
+✅ Profile Page  
+✅ Integration with 3rd Party REST APIs
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Firebase Authentication**
+  - Email/password login
+  - Secure user sessions
+- **Login Page**
+  - User-friendly UI
+  - Form validation
+- **Home Page**
+  - Dashboard for app features
+  - Fetches data from external REST APIs
+- **Profile Page**
+  - Display user details
+  - Edit profile functionality (optional)
+- **3rd Party API Integration**
+  - Fetch and display external data (e.g. posts, weather, news)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🛠️ Tech Stack
+
+- [Flutter](https://flutter.dev/)
+- [Dart](https://dart.dev/)
+- [Firebase Authentication](https://firebase.google.com/docs/auth)
+- [http](https://pub.dev/packages/http) package for REST API calls
+- State Management: Provider / Riverpod / Bloc (choose your preferred)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed
+- Firebase project set up
+- Emulator or physical device
