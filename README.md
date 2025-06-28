@@ -29,6 +29,22 @@ A Flutter mobile application featuring:
 
 ---
 
+## 📸 Screenshots
+
+### Login Page
+
+![Login Page](assets/screenshots/login_page.png)
+
+### Home Page
+
+![Home Page](assets/screenshots/home_page.png)
+
+### Profile Page
+
+![Profile Page](assets/screenshots/profile_page.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 - [Flutter](https://flutter.dev/)
