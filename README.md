@@ -37,7 +37,7 @@ A Flutter mobile application featuring:
 
 ### Home Page
 
-![Home Page](assets/screenshots/home_page.png)
+![Home Page](assets/screenshots/ultimate_flutter_app_home.PNG)
 
 ### Profile Page
 
