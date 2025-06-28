@@ -61,3 +61,9 @@ A Flutter mobile application featuring:
 - Flutter SDK installed
 - Firebase project set up
 - Emulator or physical device
+
+---
+
+## 📞 Contact
+
+- mac.window.10@gmail.com
