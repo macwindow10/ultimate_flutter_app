@@ -12,13 +12,31 @@ class _ProfilePageState extends State<ProfilePage> {
   bool? isChecked = false;
   bool isSwitched = false;
   double sliderValue = 0.0;
+  String? item = "Item 1";
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            DropdownButton<String>(
+              items: <String>['Item 1', 'Item 2', 'Item 3'].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (value) {
+                print(value);
+                setState(() {
+                  item = value;
+                });
+              },
+              value: item,
+            ),
             TextField(
               controller: controller,
               decoration: InputDecoration(border: OutlineInputBorder()),
