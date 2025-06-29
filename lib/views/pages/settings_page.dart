@@ -33,16 +33,32 @@ class _SettingsPageState extends State<SettingsPage> {
                     ));
                   },
                   child: const Text('Show Snackbar')),
+              Divider(),
               ElevatedButton(
                   onPressed: () {
                     showDialog(
                       context: context,
                       builder: (context) {
-                        return AboutDialog();
+                        // return AboutDialog();
+                        return AlertDialog(
+                          title: Text('Alert'),
+                          content: Text('Alert Contents'),
+                          actions: [
+                            FilledButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Close'))
+                          ],
+                        );
                       },
                     );
                   },
                   child: const Text('Show Dialog')),
+              Divider(
+                color: Colors.teal,
+                thickness: 5.0,
+              ),
               DropdownButton<String>(
                 items:
                     <String>['Item 1', 'Item 2', 'Item 3'].map((String value) {
