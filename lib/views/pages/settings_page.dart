@@ -24,6 +24,25 @@ class _SettingsPageState extends State<SettingsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ElevatedButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('Hello from Snackbar'),
+                      duration: Duration(seconds: 5),
+                      behavior: SnackBarBehavior.floating,
+                    ));
+                  },
+                  child: const Text('Show Snackbar')),
+              ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AboutDialog()
+                      },
+                    );
+                  },
+                  child: const Text('Show Dialog')),
               DropdownButton<String>(
                 items:
                     <String>['Item 1', 'Item 2', 'Item 3'].map((String value) {
