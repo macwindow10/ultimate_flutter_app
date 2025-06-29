@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ultimate_flutter_app/data/constants.dart';
 import 'package:ultimate_flutter_app/data/notifiers.dart';
 import 'package:ultimate_flutter_app/views/pages/home_page.dart';
 import 'package:ultimate_flutter_app/views/pages/profile_page.dart';
@@ -20,8 +22,12 @@ class WidgetTree extends StatelessWidget {
         title: const Text('Ultimate Flutter App'),
         actions: [
           IconButton(
-              onPressed: () {
+              onPressed: () async {
                 isDarkModeNotifier.value = !isDarkModeNotifier.value;
+                final SharedPreferences preferences =
+                    await SharedPreferences.getInstance();
+                await preferences.setBool(
+                    KConstants.keyThemeMode, isDarkModeNotifier.value);
               },
               icon: ValueListenableBuilder(
                 valueListenable: isDarkModeNotifier,

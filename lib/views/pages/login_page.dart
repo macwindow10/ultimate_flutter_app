@@ -92,11 +92,15 @@ class _LoginPageState extends State<LoginPage> {
   void onLoginPressed() {
     if (confirmedEmail == controllerEmail.text &&
         confirmedPassword == controllerPassword.text) {
-      Navigator.pushReplacement(context, MaterialPageRoute(
-        builder: (context) {
-          return WidgetTree();
-        },
-      ));
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return WidgetTree();
+          },
+        ),
+        (route) => false,
+      );
     }
   }
 }
