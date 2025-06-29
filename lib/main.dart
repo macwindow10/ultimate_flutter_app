@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ultimate_flutter_app/data/notifiers.dart';
+import 'package:ultimate_flutter_app/views/pages/welcome_page.dart';
 import 'package:ultimate_flutter_app/views/widget_tree.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class _MyAppState extends State<MyApp> {
               colorScheme: ColorScheme.fromSeed(
                   seedColor: Colors.teal,
                   brightness: isDarkMode ? Brightness.dark : Brightness.light)),
-          home: const WidgetTree(),
+          home: WelcomePage(),
         );
       },
     );
