@@ -38,7 +38,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     showDialog(
                       context: context,
                       builder: (context) {
-                        return AboutDialog()
+                        return AboutDialog();
                       },
                     );
                   },
